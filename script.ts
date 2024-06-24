@@ -59,6 +59,32 @@ async function main() {
   console.dir(usersWithPosts, { depth: null })
 }
 
+//to get
+// [
+//     { id: 1, email: 'alice@prisma.io', name: 'Alice', posts: [] },
+//     {
+//       id: 2,
+//       email: 'bob@prisma.io',
+//       name: 'Bob',
+//       posts: [
+//         {
+//           id: 1,
+//           title: 'Hello World',
+//           content: null,
+//           published: true,
+//           authorId: 2
+//         },
+//         {
+//           id: 2,
+//           title: 'My second post',
+//           content: 'This is still a draft',
+//           published: false,
+//           authorId: 2
+//         }
+//       ]
+//     }
+//   ]
+
 main()
   .then(async () => {
     await prisma.$disconnect()
